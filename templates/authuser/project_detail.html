@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{project}}</title>
+    <script src="https://kit.fontawesome.com/d310fdb7e5.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cambay&family=Ubuntu+Mono&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            font-family: 'Ubuntu Mono', monospace;
+            margin: 6px;
+        }
+
+        .innercontainer {
+            width: 75%;
+            margin: 150px auto;
+        }
+
+        div.desc {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            
+        }
+
+        h3 {
+            margin: 5px auto;
+            font-family: 'Ubuntu Mono', monospace;
+        }
+        div.desc2{
+            
+            font-family: 'Cambay', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="innercontainer">
+            <div>
+
+                <a href="{% url 'home' %}">GO BACK</a>
+            </div>
+            <h2 class="title">Project - {{project}}</h2>
+            <div>
+
+                <i class="fas fa-user-circle"> {{project.user}}</i>
+            </div>
+            <div>
+                <i class="fas fa-phone-alt"> {{project.phone_no}}</i>
+            </div>
+            <div>
+
+                <i class="far fa-calendar-alt"> {{project.created}}</i>
+            </div>
+            <div>
+                {% if project.booked %}
+
+                <h4>Project Status: <i class="fas fa-lock"> Closed</i></h4>
+                {% else %}
+                <h4>Project Status: <i class="fas fa-unlock-alt"> Open</i></h4>
+
+
+                {% endif %}
+            </div>
+            <div class="desc">
+                <h3>Description:</h3>
+            </div>
+            <div class="desc2">
+                {{project.description}}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

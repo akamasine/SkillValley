@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/authuser/myproject.css">
+    <title>MyProject</title>
+</head>
+<body>
+    <div class="mainCont">
+        <div class="container">
+            <header>
+
+                <div class="search">
+                    <a href="{% url 'home' %}">Go Back</a>
+                    <h2>My Projects</h2>
+                    <p>View, organize and edit your project Details</p>
+                </div>
+                <div class="addproject">
+                    <a href="project-create">
+                        <button>+ Add a Project</button>
+                    </a>
+                </div>
+            </header>
+            <hr style="width: 90%; margin: 30px auto;">
+            <div class="projectcontainer">
+                <h2>My Projects</h2>
+            
+
+
+                {% for project in myproject %}
+                <div class="lproject">
+                    <div class="projectdisplay">
+
+                        <p>{{project.title}}</p>
+                        
+                    </div>
+                    <div class="viewlink">
+
+                        
+                        <a href="{% url 'project' project.id %}">View</a>
+                        <a href="{% url 'project-update' project.id %}">Edit</a>
+                        <a href="{% url 'project-delete' project.id %}">Delete</a>
+                    </div>
+                </div>
+
+
+
+                
+
+
+                {% empty %}
+                <div class="noproject">
+
+                    <h3>No Available project</h3>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            

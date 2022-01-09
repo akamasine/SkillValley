@@ -1,0 +1,93 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+.box{
+    width:400px;
+    padding:30px;
+    top:50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0);
+    text-align: center;
+    border: 1px solid rgb(196, 194, 194);
+
+}
+.box h1{
+    color: rgb(29, 23, 23);
+    font-weight: 700;
+}
+.box input[type="text"],.box input[type="password"]
+{
+    border: 0;
+    background-color: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid rgb(10, 78, 95);
+    padding: 14px 10px;
+    width: 300px;
+    outline: none;
+    color: rgb(7, 7, 7);
+    border-radius: 10px;
+    transition: 0.25px;
+
+
+}
+.box input[type="text"]:focus,.box input[type="password"]:focus
+{
+    width: 270px;
+    border-color: rgb(10, 78, 95);
+
+}
+.box input[type="submit"]{
+    border: 0;
+    background-color: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid rgb(10, 78, 95);
+    padding: 14px 10px;
+    outline: none;
+    color: rgb(34, 32, 32);
+    border-radius: 20px;
+    transition: 0.25px;
+    cursor: pointer;
+    width: 110px;
+}
+.box input[type="submit"]:hover
+{
+    font-size: 16px;
+    color: whitesmoke;
+    background: rgb(38, 119, 139);
+}
+.box #email_error, .box #pass_error{
+    margin-top: 5px;
+    width: 345px;
+    font-size: 14px;
+    color: #C62828;
+    background: rgba(255,0,0,0.1);
+	text-align: center;
+	padding: 5px 8px;
+	border-radius: 3px;
+	border: 1px solid #EF9A9A;
+	display: none;
+
+}
+#logo {
+    width:300px;
+    margin-top: 60px;
+    margin-left: 150px;
+
+}
+a#forgotlink {
+            text-decoration: none;
+            color: rgb(87, 78, 78);
+}
+a#forgotlink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color:black;
+}

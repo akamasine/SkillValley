@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" and dir="Itr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+    <div>
+    <a href = "/index" target = "_self">
+        <img src="/static/img/skill.png" alt="logo" id="logo"></a>
+    </div>
+    <form class="box" name="form" action="login" method="POST" onsubmit="return validated()">
+    {% csrf_token %}
+        <h1>
+            Log in to Skill Valley
+        </h1>
+        <input type="text" name="username" placeholder="Enter Username" id="username" >
+        <div id="email_error">Please fill up your Username</div>
+        <input type="password" name="password" placeholder="Enter Password" id="password" >
+        <div id="pass_error">Please fill up your Password</div>
+        <div id="forgotpass"> 
+        <a href="reset_password" id= 'forgotlink'>Forgot Password?</a>
+        </div>
+        <input type="submit" name="" value="Login">
+        <div style="padding-top: 6px; color: red;">
+          {% if messages %}
+          {% for message in messages %}
+          {% if message.level == DEFAULT_MESSAGE_LEVELS.WARNING%}
+          <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>{{ message }}</strong>
+          </div>
+          {%endif%}
+          {% endfor %}
+          {% endif %}
+        </div>
+        <h6>Or don't have Skill Valley Account?, <a href="joinin">Sign Up</a></h3>
+            
+            
+        </form>
+        <script src="/static/scripts/validate.js"></script> 
+    </body>
+</html>

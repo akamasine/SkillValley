@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.maincont{
+    width: 100%;
+}
+.container{
+    width: 75%;
+    /* border: 2px solid black; */
+    margin: auto;
+    margin-top: 5px;
+}
+.search{
+    display: inline-block;
+}
+.logo{
+    padding-top: 18px;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+}
+li, a, button {
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 1500;
+    font-size: 18px;
+    text-decoration: none;
+}
+header{
+    padding: 5px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav_links{
+    list-style: none;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+button.btn{
+    width: 90px;
+    height: 30px;
+    border-radius: 0 3px 3px 0;
+    background-color: #1dbf73;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    padding: 4px 0px;
+}
+.search{
+         padding-bottom: 25px;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    color: rgb(99, 102, 100);
+}
+input{
+    height: 25px;
+}
+.logout{
+    margin-bottom: 20px;
+}
+button.btn:hover{
+    cursor: pointer;
+    background-color:  #0ca15c;
+}
+.logout a:hover{
+    text-decoration: underline;
+}
+
+.greet{
+    
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+.welcome{
+    border-color: blanchedalmond;
+    border-radius: 2px;
+    background-color: #faf8f8;
+    min-height: 250px;
+}
+.carosal{
+    margin-left: 20px;
+}
+.carousel-item{
+    max-height: 250px;
+    background: no-repeat scroll center scroll;
+
+    
+}
+h3{
+    font-family: 'Ubuntu Mono', monospace;
+    text-align: center;
+    margin-top: 40px;
+    margin: 30px auto ;
+    font-size: 20px;
+    font-weight: bold;
+}
+.greet p{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+.lproject{
+    margin:20px 5%;
+}
+form.search {
+    margin-top: 35px;
+}
+.projectcontainer{
+    border: 2px red;
+    margin:30px auto;
+}
+h2{
+    margin-left: 45px;
+}
+.lproject{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-color: blanchedalmond;
+    border-radius: 2px;
+    background-color: #faf8f8;
+    /* max-width: 250px; */
+    max-height: 250px;
+    min-width: 100%;
+
+}
