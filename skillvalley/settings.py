@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-o65fd6s9nr30dky%&mx2pjdc7g+re8blp$^8cf1wx!0eyaz&yx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['skillvalleynp.herokuapp.com', '']
+ALLOWED_HOSTS = ['skillvalleynp.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -121,6 +122,8 @@ LOGIN_URL = 'login'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+
+STATIC_ROOT = [ BASE_DIR / "staticfiles"]
 
 STATIC_URL = '/static/'
 
